@@ -12,4 +12,10 @@
     <Email>andrei.petrus@organiser.com</Email>
     <Password>password</Password>
   </User>
+  <User>
+    <FirstName>Lorena</FirstName>
+    <LastName>Astalis</LastName>
+    <Email>lorena@organiser.com</Email>
+    <Password>password</Password>
+  </User>
 </ArrayOfUser>

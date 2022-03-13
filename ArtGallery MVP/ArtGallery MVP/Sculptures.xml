@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<ArrayOfSculpture xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sculpture>
+    <Title>Flower</Title>
+    <ArtistName>Picasso</ArtistName>
+    <Year>1870</Year>
+    <Type>kdflsj</Type>
+  </Sculpture>
+  <Sculpture>
+    <Title>Flower1</Title>
+    <ArtistName>Picasso</ArtistName>
+    <Year>1870</Year>
+    <Type>Cubism</Type>
+  </Sculpture>
+  <Sculpture>
+    <Title>Flowers2</Title>
+    <ArtistName>Picasso</ArtistName>
+    <Year>1870</Year>
+    <Type>kdflsj</Type>
+  </Sculpture>
+</ArrayOfSculpture>

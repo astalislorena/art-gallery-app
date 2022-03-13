@@ -8,8 +8,8 @@ namespace ArtGallery_MVP.Models
 {
     public class Art
     {
-        public String Title { get; set; }
-        public String ArtistName { get; set; }
+        public string Title { get; set; }
+        public string ArtistName { get; set; }
         public int Year { get; set; }
 
         public Art()

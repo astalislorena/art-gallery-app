@@ -6,12 +6,18 @@ using System.Threading.Tasks;
 
 namespace ArtGallery_MVP.Models
 {
-    internal class Painting : Art
+    public class Painting : Art
     {
-        private PaintingType Type { get; set;  } = PaintingType.Unknown;
-        private TechniqueType Technique { get; set; } = TechniqueType.Unknown;
+        public string Type { get; set;  } = "unknown";
+        public string Technique { get; set; } = "unknown";
 
-        public Painting(String title, String artistName, int year, PaintingType type, TechniqueType technique):base(title,artistName,year)
+        public Painting()
+        {
+            this.Technique = "unknown";
+            this.Type = "unknown"; 
+        }
+
+        public Painting(String title, String artistName, int year, string type, string technique):base(title,artistName,year)
         {
             this.Title = title;
             this.ArtistName = artistName;
@@ -26,7 +32,7 @@ namespace ArtGallery_MVP.Models
             result[0] = this.Title;
             result[1] = this.ArtistName;
             result[2] = this.Year.ToString();
-            result[3] = this.Type.ToString() + " " + this.Technique.ToString();
+            result[3] = this.Type + " - " + this.Technique;
             return result;
         }
     }

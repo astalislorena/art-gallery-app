@@ -10,7 +10,11 @@ namespace ArtGallery_MVP.View.ArtsManagement
     {
         string Title { get; set; }
         string ArtistName { get; set; }
-        List<string[]> Arts { set; }
+        string Technique { get; set; }
+        int Year { get; set; }
+        string Type { get; set; }
+        List<string[]> Paintings { set; }
+        List<string[]> Sculptures { set; }
         string Selected { get; }
 
     }

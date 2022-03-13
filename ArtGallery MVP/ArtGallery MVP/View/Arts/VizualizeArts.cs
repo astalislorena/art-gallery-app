@@ -1,5 +1,6 @@
 ﻿using ArtGallery_MVP.Presenter;
 using ArtGallery_MVP.View;
+using ArtGallery_MVP.View.ArtsManagement;
 using ArtGallery_MVP.View.Staff;
 using System;
 using System.Collections.Generic;
@@ -60,6 +61,8 @@ namespace ArtGallery_MVP
             }
         }
 
+        public int Year { get => (int) txtYear.Value; set => txtYear.Value = value; }
+
         public VizualizeArts()
         {
             InitializeComponent();
@@ -114,14 +117,14 @@ namespace ArtGallery_MVP
             ArtsPresenter pp = new ArtsPresenter(this);
             if(txtEmail.Text.Contains("admin") && pp.GetUser(txtEmail.Text, txtPassword.Text))
             {
-                this.Hide();
                 AdminForm adminForm = new AdminForm();
                 adminForm.Show();
             } else
             {
-                if (txtEmail.Text.Contains("organizer") && pp.GetUser(txtEmail.Text, txtPassword.Text))
+                if (txtEmail.Text.Contains("organiser") && pp.GetUser(txtEmail.Text, txtPassword.Text))
                 {
-                    this.Hide();
+                    VizualiseArtsManagement artsManagement = new VizualiseArtsManagement();
+                    artsManagement.Show();
                     
                 } else
                 {

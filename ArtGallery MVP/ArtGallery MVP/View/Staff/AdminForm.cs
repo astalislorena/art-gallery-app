@@ -82,7 +82,7 @@ namespace ArtGallery_MVP.View.Staff
         private void btnAddUser_Click(object sender, EventArgs e)
         {
             StaffPresenter sp = new StaffPresenter(this);
-            if(!sp.GetByEmail(txtEmail.Text, false))
+            if(sp.GetByEmail(txtEmail.Text, false))
             {
                 MessageBox.Show("This user already exists!");
                 return;

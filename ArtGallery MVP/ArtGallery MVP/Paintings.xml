@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<ArrayOfPainting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Painting>
+    <Title>Flower</Title>
+    <ArtistName>Picasso</ArtistName>
+    <Year>1870</Year>
+    <Type>kdflsj</Type>
+    <Technique>hfdsj</Technique>
+  </Painting>
+  <Painting>
+    <Title>Flower1</Title>
+    <ArtistName>Picasso</ArtistName>
+    <Year>1870</Year>
+    <Type>Cubism</Type>
+    <Technique>hfdsj</Technique>
+  </Painting>
+  <Painting>
+    <Title>Flowers2</Title>
+    <ArtistName>Picasso</ArtistName>
+    <Year>1870</Year>
+    <Type>kdflsj</Type>
+    <Technique>hfdsj</Technique>
+  </Painting>
+  <Painting>
+    <Title>ertetr</Title>
+    <ArtistName>435</ArtistName>
+    <Year>1902</Year>
+    <Type>32443345</Type>
+    <Technique>34536565</Technique>
+  </Painting>
+</ArrayOfPainting>

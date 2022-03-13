@@ -10,7 +10,6 @@ namespace ArtGallery_MVP.View.Staff
         string LastName { get; set; }
         string Email { get; set; }
         string Password { get; set; }
-
         string Selected { get; }
     }
 }

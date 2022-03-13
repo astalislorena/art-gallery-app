@@ -10,6 +10,8 @@ namespace ArtGallery_MVP.View
     {
         string Title { get; set; }
         string ArtistName { get; set; }
+
+        int Year { get; set; }
         List<string[]> Arts { set; }
         string Selected { get; }
     }

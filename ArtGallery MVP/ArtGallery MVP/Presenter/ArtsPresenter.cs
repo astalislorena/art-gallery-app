@@ -37,11 +37,6 @@ namespace ArtGallery_MVP.Presenter
             this.Viz.Arts = arts;
         }
 
-        public void Save()
-        {
-            ArtsPers.SaveArtsToXMLFile();
-        }
-
         public void GetByTitle(string title)
         {
             if (ArtsPers.GetArts() == null)
