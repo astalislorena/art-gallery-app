@@ -8,9 +8,9 @@ namespace ArtGallery_MVP.View
 {
     internal interface IVizArts
     {
-        String Title { get; set; }
-        String ArtistName { get; set; }
-        List<String[]> Arts { set; }
-        String Selected { get; }
+        string Title { get; set; }
+        string ArtistName { get; set; }
+        List<string[]> Arts { set; }
+        string Selected { get; }
     }
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ArrayOfUser xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <User>
+    <FirstName>Lorena</FirstName>
+    <LastName>Astalis</LastName>
+    <Email>lorena.astalis@admin.com</Email>
+    <Password>password</Password>
+  </User>
+  <User>
+    <FirstName>Andrei</FirstName>
+    <LastName>Petrus</LastName>
+    <Email>andrei.petrus@organiser.com</Email>
+    <Password>password</Password>
+  </User>
+</ArrayOfUser>

@@ -1,5 +1,6 @@
 ﻿using ArtGallery_MVP.Presenter;
 using ArtGallery_MVP.View;
+using ArtGallery_MVP.View.Staff;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -74,8 +75,8 @@ namespace ArtGallery_MVP
 
         private void VizualizeArts_Load(object sender, EventArgs e)
         {
-           /* ArtsPresenter pp = new ArtsPresenter(this);
-            pp.List();*/
+            ArtsPresenter pp = new ArtsPresenter(this);
+            pp.List();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -106,6 +107,28 @@ namespace ArtGallery_MVP
         {
             ArtsPresenter pp = new ArtsPresenter(this);
             pp.List();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            ArtsPresenter pp = new ArtsPresenter(this);
+            if(txtEmail.Text.Contains("admin") && pp.GetUser(txtEmail.Text, txtPassword.Text))
+            {
+                this.Hide();
+                AdminForm adminForm = new AdminForm();
+                adminForm.Show();
+            } else
+            {
+                if (txtEmail.Text.Contains("organizer") && pp.GetUser(txtEmail.Text, txtPassword.Text))
+                {
+                    this.Hide();
+                    
+                } else
+                {
+                    MessageBox.Show("Failed to login!");
+                }
+            }
+            return;
         }
     }
 }
