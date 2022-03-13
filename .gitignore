@@ -50,3 +50,5 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+ArtGallery MVP/ArtGallery MVP/obj/
+ArtGallery MVP/ArtGallery MVP/bin/Debug/net5.0-windows/

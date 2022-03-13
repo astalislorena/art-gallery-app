@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<ArrayOfArt xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Art>
+    <Title>Flower</Title>
+    <ArtistName>Picasso</ArtistName>
+    <Year>1870</Year>
+  </Art>
+
+ <Painting>
+    <Title>Flower</Title>
+    <ArtistName>Picasso</ArtistName>
+    <Year>1870</Year>
+    <Type>Cubism</Type>
+    <Technique>Pencil</Technique>
+  </Painting>
+  <Art>
+    <Title>Flowers</Title>
+    <ArtistName>Picasso</ArtistName>
+    <Year>1870</Year>
+  </Art>
+</ArrayOfArt>
