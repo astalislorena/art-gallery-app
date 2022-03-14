@@ -1,21 +1,21 @@
 <?xml version="1.0"?>
 <ArrayOfSculpture xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Sculpture>
-    <Title>Flower</Title>
-    <ArtistName>Picasso</ArtistName>
-    <Year>1870</Year>
-    <Type>kdflsj</Type>
+    <Title>Bust of Nefertiti</Title>
+    <ArtistName>Thutmose</ArtistName>
+    <Year>-1345</Year>
+    <Type>Limestone</Type>
   </Sculpture>
   <Sculpture>
-    <Title>Flower1</Title>
-    <ArtistName>Picasso</ArtistName>
-    <Year>1870</Year>
-    <Type>Cubism</Type>
+    <Title>The Discus Thrower</Title>
+    <ArtistName>Myron</ArtistName>
+    <Year>-450</Year>
+    <Type>Classical</Type>
   </Sculpture>
   <Sculpture>
-    <Title>Flowers2</Title>
-    <ArtistName>Picasso</ArtistName>
-    <Year>1870</Year>
-    <Type>kdflsj</Type>
+    <Title>Pieta</Title>
+    <ArtistName>Michellangelo</ArtistName>
+    <Year>1499</Year>
+    <Type>Renaissance</Type>
   </Sculpture>
 </ArrayOfSculpture>

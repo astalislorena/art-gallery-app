@@ -1,31 +1,38 @@
 <?xml version="1.0"?>
 <ArrayOfPainting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Painting>
-    <Title>Flower</Title>
-    <ArtistName>Picasso</ArtistName>
-    <Year>1870</Year>
-    <Type>kdflsj</Type>
-    <Technique>hfdsj</Technique>
+    <Title>Composition 8</Title>
+    <ArtistName>Vasily Kandinsky</ArtistName>
+    <Year>1923</Year>
+    <Type>Abstract art</Type>
+    <Technique>Oil Painting</Technique>
   </Painting>
   <Painting>
-    <Title>Flower1</Title>
-    <ArtistName>Picasso</ArtistName>
-    <Year>1870</Year>
-    <Type>Cubism</Type>
-    <Technique>hfdsj</Technique>
+    <Title>Royal Red and Blue</Title>
+    <ArtistName>Mark Rothko</ArtistName>
+    <Year>1954</Year>
+    <Type>Abstract art</Type>
+    <Technique>Oil Paint</Technique>
   </Painting>
   <Painting>
-    <Title>Flowers2</Title>
-    <ArtistName>Picasso</ArtistName>
-    <Year>1870</Year>
-    <Type>kdflsj</Type>
-    <Technique>hfdsj</Technique>
+    <Title>Starry Night</Title>
+    <ArtistName>Vincent van Gogh</ArtistName>
+    <Year>1889</Year>
+    <Type>Modern art</Type>
+    <Technique>Oil Painting</Technique>
   </Painting>
   <Painting>
-    <Title>ertetr</Title>
-    <ArtistName>435</ArtistName>
-    <Year>1902</Year>
-    <Type>32443345</Type>
-    <Technique>34536565</Technique>
+    <Title>Beheading of Saint John the Baptist</Title>
+    <ArtistName>Caravaggio</ArtistName>
+    <Year>1607</Year>
+    <Type>Baroque</Type>
+    <Technique>Oil Painting</Technique>
   </Painting>
+	<Painting>
+		<Title>Guernica</Title>
+		<ArtistName>Pablo Picasso</ArtistName>
+		<Year>1937</Year>
+		<Type>Cubism</Type>
+		<Technique>Oil Painting</Technique>
+	</Painting>
 </ArrayOfPainting>
