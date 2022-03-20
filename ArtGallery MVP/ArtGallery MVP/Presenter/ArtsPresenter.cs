@@ -1,4 +1,5 @@
-﻿using ArtGallery_MVP.Models.Persistance;
+﻿using ArtGallery_MVP.Models;
+using ArtGallery_MVP.Models.Persistance;
 using ArtGallery_MVP.View;
 using System;
 using System.Collections.Generic;
@@ -108,6 +109,44 @@ namespace ArtGallery_MVP.Presenter
             }
             MessageBox.Show("This user does not exists.");
             return false;
+        }
+
+        public void ListPaintings()
+        {
+            if (ArtsPers.GetArts() == null)
+            {
+                MessageBox.Show("Couldn't load arts.");
+                return;
+            }
+            List<String[]> arts = new List<String[]>();
+            foreach (var item in ArtsPers.GetArts())
+            {
+                if(item.GetType() == typeof(Painting))
+                {
+                    arts.Add(item.Convert());
+                }
+                
+            }
+            this.Viz.Arts = arts;
+        }
+
+        public void ListSculptures()
+        {
+            if (ArtsPers.GetArts() == null)
+            {
+                MessageBox.Show("Couldn't load arts.");
+                return;
+            }
+            List<String[]> arts = new List<String[]>();
+            foreach (var item in ArtsPers.GetArts())
+            {
+                if (item.GetType() == typeof(Sculpture))
+                {
+                    arts.Add(item.Convert());
+                }
+
+            }
+            this.Viz.Arts = arts;
         }
 
     }

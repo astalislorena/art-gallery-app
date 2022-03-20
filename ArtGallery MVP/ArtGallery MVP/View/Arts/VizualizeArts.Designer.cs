@@ -28,9 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VizualizeArts));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnVizAllArts = new System.Windows.Forms.Button();
             this.btnSearchByYear = new System.Windows.Forms.Button();
             this.btnSearchByArtist = new System.Windows.Forms.Button();
@@ -43,6 +47,7 @@
             this.txtTitle = new System.Windows.Forms.TextBox();
             this.listView = new System.Windows.Forms.ListView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -54,8 +59,10 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtYear)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl
@@ -65,7 +72,7 @@
             this.tabControl.Location = new System.Drawing.Point(12, 12);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(776, 426);
+            this.tabControl.Size = new System.Drawing.Size(854, 633);
             this.tabControl.TabIndex = 0;
             // 
             // tabPage1
@@ -74,7 +81,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(768, 398);
+            this.tabPage1.Size = new System.Drawing.Size(846, 605);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Arts";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -87,6 +94,9 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
+            this.splitContainer1.Panel1.Controls.Add(this.button2);
+            this.splitContainer1.Panel1.Controls.Add(this.button1);
             this.splitContainer1.Panel1.Controls.Add(this.btnVizAllArts);
             this.splitContainer1.Panel1.Controls.Add(this.btnSearchByYear);
             this.splitContainer1.Panel1.Controls.Add(this.btnSearchByArtist);
@@ -101,9 +111,39 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.listView);
-            this.splitContainer1.Size = new System.Drawing.Size(762, 392);
-            this.splitContainer1.SplitterDistance = 293;
+            this.splitContainer1.Size = new System.Drawing.Size(840, 599);
+            this.splitContainer1.SplitterDistance = 310;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 320);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(312, 279);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(195, 177);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(101, 23);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "See sculptures";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(95, 177);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 23);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "See paintings";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnVizAllArts
             // 
@@ -117,31 +157,31 @@
             // 
             // btnSearchByYear
             // 
-            this.btnSearchByYear.Location = new System.Drawing.Point(243, 138);
+            this.btnSearchByYear.Location = new System.Drawing.Point(265, 138);
             this.btnSearchByYear.Name = "btnSearchByYear";
             this.btnSearchByYear.Size = new System.Drawing.Size(31, 23);
             this.btnSearchByYear.TabIndex = 9;
-            this.btnSearchByYear.Text = "Y";
+            this.btnSearchByYear.Text = "🔍";
             this.btnSearchByYear.UseVisualStyleBackColor = true;
             this.btnSearchByYear.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnSearchByArtist
             // 
-            this.btnSearchByArtist.Location = new System.Drawing.Point(243, 88);
+            this.btnSearchByArtist.Location = new System.Drawing.Point(265, 87);
             this.btnSearchByArtist.Name = "btnSearchByArtist";
             this.btnSearchByArtist.Size = new System.Drawing.Size(31, 23);
             this.btnSearchByArtist.TabIndex = 8;
-            this.btnSearchByArtist.Text = "A";
+            this.btnSearchByArtist.Text = "🔍";
             this.btnSearchByArtist.UseVisualStyleBackColor = true;
             this.btnSearchByArtist.Click += new System.EventHandler(this.btnSearchByArtist_Click);
             // 
             // btnSearchBytitle
             // 
-            this.btnSearchBytitle.Location = new System.Drawing.Point(243, 39);
+            this.btnSearchBytitle.Location = new System.Drawing.Point(265, 39);
             this.btnSearchBytitle.Name = "btnSearchBytitle";
             this.btnSearchBytitle.Size = new System.Drawing.Size(31, 23);
             this.btnSearchBytitle.TabIndex = 7;
-            this.btnSearchBytitle.Text = "T";
+            this.btnSearchBytitle.Text = "🔍";
             this.btnSearchBytitle.UseVisualStyleBackColor = true;
             this.btnSearchBytitle.Click += new System.EventHandler(this.btnSearchBytitle_Click);
             // 
@@ -202,16 +242,18 @@
             // listView
             // 
             this.listView.HideSelection = false;
-            this.listView.Location = new System.Drawing.Point(12, 14);
+            this.listView.Location = new System.Drawing.Point(3, 14);
             this.listView.MultiSelect = false;
             this.listView.Name = "listView";
             this.listView.ShowItemToolTips = true;
-            this.listView.Size = new System.Drawing.Size(439, 364);
+            this.listView.Size = new System.Drawing.Size(520, 570);
             this.listView.TabIndex = 0;
             this.listView.UseCompatibleStateImageBehavior = false;
+            this.listView.SelectedIndexChanged += new System.EventHandler(this.listView_SelectedIndexChanged);
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.pictureBox2);
             this.tabPage2.Controls.Add(this.btnLogin);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.label4);
@@ -220,14 +262,24 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(768, 398);
+            this.tabPage2.Size = new System.Drawing.Size(846, 605);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Login";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(199, 240);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(487, 320);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(349, 185);
+            this.btnLogin.Location = new System.Drawing.Point(395, 179);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 23);
             this.btnLogin.TabIndex = 4;
@@ -238,7 +290,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(282, 124);
+            this.label5.Location = new System.Drawing.Point(328, 118);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 15);
             this.label5.TabIndex = 3;
@@ -247,7 +299,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(283, 76);
+            this.label4.Location = new System.Drawing.Point(329, 70);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 15);
             this.label4.TabIndex = 2;
@@ -255,14 +307,14 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(283, 142);
+            this.txtPassword.Location = new System.Drawing.Point(329, 136);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(217, 23);
             this.txtPassword.TabIndex = 1;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(283, 93);
+            this.txtEmail.Location = new System.Drawing.Point(329, 87);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(217, 23);
             this.txtEmail.TabIndex = 0;
@@ -271,7 +323,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(878, 657);
             this.Controls.Add(this.tabControl);
             this.Name = "VizualizeArts";
             this.Text = "Art Gallery";
@@ -283,9 +335,11 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtYear)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -312,5 +366,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

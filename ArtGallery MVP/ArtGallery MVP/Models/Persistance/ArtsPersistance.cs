@@ -4,7 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using System.Xml.Serialization;
-
+using ServiceStack.Text;
+using XmlSerializer = System.Xml.Serialization.XmlSerializer;
 
 namespace ArtGallery_MVP.Models.Persistance
 {
@@ -14,6 +15,7 @@ namespace ArtGallery_MVP.Models.Persistance
 
         public ArtsPersistance()
         {
+            this.arts = new List<Art>();
             this.ReadFromXMLFile();
         }
 
@@ -25,14 +27,15 @@ namespace ArtGallery_MVP.Models.Persistance
                 FileStream fs2 = new FileStream("../../../Sculptures.xml", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
                 try
                 {
+                    
                     XmlSerializer xs1 = new XmlSerializer(typeof(List<Painting>));
                     var cast1 = xs1.Deserialize(fs1);
-                    List<Art> a = ((List<Painting>) cast1).Cast<Art>().ToList();
+                    List<Painting> a = ((List<Painting>)cast1);
+                    a.ForEach(aa => arts.Add(aa));
                     XmlSerializer xs2 = new XmlSerializer(typeof(List<Sculpture>));
                     var cast2 = xs2.Deserialize(fs2);
-                    List<Art> b = ((List<Sculpture>) cast2).Cast<Art>().ToList();
-                    a.AddRange(b);
-                    this.arts = a;
+                    List<Sculpture> b = ((List<Sculpture>)cast2);
+                    b.ForEach(bb => arts.Add(bb));
                 }
                 catch (Exception e)
                 {

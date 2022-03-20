@@ -3,19 +3,13 @@
   <User>
     <FirstName>Lorena</FirstName>
     <LastName>Astalis</LastName>
-    <Email>lorena.astalis@admin.com</Email>
-    <Password>password</Password>
-  </User>
-  <User>
-    <FirstName>Andrei</FirstName>
-    <LastName>Petrus</LastName>
-    <Email>andrei.petrus@organiser.com</Email>
+    <Email>lorena@organiser.com</Email>
     <Password>password</Password>
   </User>
   <User>
     <FirstName>Lorena</FirstName>
     <LastName>Astalis</LastName>
-    <Email>lorena@organiser.com</Email>
+    <Email>lorena@admin.com</Email>
     <Password>password</Password>
   </User>
 </ArrayOfUser>

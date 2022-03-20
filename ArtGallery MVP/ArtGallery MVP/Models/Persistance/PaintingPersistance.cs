@@ -6,6 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using ServiceStack.Text;
+using XmlSerializer = System.Xml.Serialization.XmlSerializer;
+using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace ArtGallery_MVP.Models.Persistance
 {
@@ -109,6 +114,20 @@ namespace ArtGallery_MVP.Models.Persistance
                     item.Technique = painting.Technique;
                 }
             }
+        }
+
+        public void SaveAsJSON()
+        {
+            string fileName = "Paintings.json";
+            string jsonString = JsonSerializer.Serialize(Arts);
+            File.WriteAllText(fileName, jsonString);
+        }
+
+        public void SaveAsCSV()
+        {
+            string fileName = "Paintings.csv";
+            string jsonString = CsvSerializer.SerializeToCsv(Arts);
+            File.WriteAllText(fileName, jsonString);
         }
     }
 }

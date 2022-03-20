@@ -165,7 +165,7 @@
             this.btnSrachByName.Name = "btnSrachByName";
             this.btnSrachByName.Size = new System.Drawing.Size(26, 23);
             this.btnSrachByName.TabIndex = 15;
-            this.btnSrachByName.Text = "N";
+            this.btnSrachByName.Text = "🔍";
             this.btnSrachByName.UseVisualStyleBackColor = true;
             this.btnSrachByName.Click += new System.EventHandler(this.btnSrachByName_Click);
             // 
@@ -173,9 +173,9 @@
             // 
             this.btnSearchByEmail.Location = new System.Drawing.Point(206, 151);
             this.btnSearchByEmail.Name = "btnSearchByEmail";
-            this.btnSearchByEmail.Size = new System.Drawing.Size(31, 23);
+            this.btnSearchByEmail.Size = new System.Drawing.Size(26, 23);
             this.btnSearchByEmail.TabIndex = 16;
-            this.btnSearchByEmail.Text = "E";
+            this.btnSearchByEmail.Text = "🔍";
             this.btnSearchByEmail.UseVisualStyleBackColor = true;
             this.btnSearchByEmail.Click += new System.EventHandler(this.btnSearchByEmail_Click);
             // 
@@ -193,6 +193,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnGetALlStaff);
             this.Controls.Add(this.btnSearchByEmail);

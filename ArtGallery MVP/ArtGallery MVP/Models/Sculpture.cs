@@ -20,12 +20,12 @@ namespace ArtGallery_MVP.Models
             this.Type = type;
         }
 
-        public string[] Convert()
+        public override string[] Convert()
         {
             string[] result = new string[4];
             result[0] = this.Title;
             result[1] = this.ArtistName;
-            result[2] = this.Year.ToString();
+            result[2] = this.Year < 0 ? (-this.Year).ToString() + " BC" : this.Year.ToString();
             result[3] = this.Type;
             return result;
         }

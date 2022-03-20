@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ArtGallery_MVP.Models
 {
-    public class Art
+    public abstract class Art
     {
         public string Title { get; set; }
         public string ArtistName { get; set; }
@@ -27,14 +27,6 @@ namespace ArtGallery_MVP.Models
         }
 
 
-        public string[] Convert()
-        {
-            string[] result = new string[4];
-            result[0] = this.Title;
-            result[1] = this.ArtistName;
-            result[2] = this.Year.ToString();
-            result[3] = "-";
-            return result;
-        }
+        public abstract string[] Convert();
     }
 }

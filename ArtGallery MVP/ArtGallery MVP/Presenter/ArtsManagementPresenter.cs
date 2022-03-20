@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace ArtGallery_MVP.Presenter
 {
     internal class ArtsManagementPresenter
@@ -154,6 +155,18 @@ namespace ArtGallery_MVP.Presenter
         {
             SculpturePers.DeleteSculpture(sculpture);
             SculpturePers.SaveArtsToXMLFile();
+        }
+
+        public void SaveRaportJSON()
+        {
+            PaintingPers.SaveAsJSON();
+            SculpturePers.SaveAsJSON();
+        }
+
+        public void SaveRaportCSV()
+        {
+            PaintingPers.SaveAsCSV();
+            SculpturePers.SaveAsCSV();
         }
 
     }

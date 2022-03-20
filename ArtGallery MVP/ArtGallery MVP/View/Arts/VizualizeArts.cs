@@ -69,10 +69,10 @@ namespace ArtGallery_MVP
             listView.View = System.Windows.Forms.View.Details;
             listView.GridLines = true;
             listView.FullRowSelect = true;
-            listView.Columns.Add("Title", 90);
+            listView.Columns.Add("Title", 150);
             listView.Columns.Add("Artist", 90);
             listView.Columns.Add("Year", 90);
-            listView.Columns.Add("Painting type & technique/Sculpture type", 165);
+            listView.Columns.Add("Painting type & technique/Sculpture type", 200);
 
         }
 
@@ -132,6 +132,28 @@ namespace ArtGallery_MVP
                 }
             }
             return;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            ArtsPresenter pp = new ArtsPresenter(this);
+            pp.ListPaintings();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ArtsPresenter pp = new ArtsPresenter(this);
+            pp.ListSculptures();
         }
     }
 }

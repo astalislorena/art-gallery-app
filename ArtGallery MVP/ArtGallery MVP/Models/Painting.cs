@@ -26,12 +26,12 @@ namespace ArtGallery_MVP.Models
             this.Technique = technique;
         }
 
-        public String[] Convert()
+        public override String[] Convert()
         {
             String[] result = new String[4];
             result[0] = this.Title;
             result[1] = this.ArtistName;
-            result[2] = this.Year.ToString();
+            result[2] = this.Year  < 0 ? (-this.Year).ToString() + " BC" : this.Year.ToString();
             result[3] = this.Type + " - " + this.Technique;
             return result;
         }

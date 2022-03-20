@@ -192,5 +192,17 @@ namespace ArtGallery_MVP.View.ArtsManagement
             ArtsManagementPresenter amp = new ArtsManagementPresenter(this);
             amp.ListSculptures();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ArtsManagementPresenter amp = new ArtsManagementPresenter(this);
+            amp.SaveRaportJSON();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ArtsManagementPresenter amp = new ArtsManagementPresenter(this);
+            amp.SaveRaportCSV();
+        }
     }
 }

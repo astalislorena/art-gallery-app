@@ -51,6 +51,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.nnumericYear = new System.Windows.Forms.NumericUpDown();
             this.isPainting = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nnumericYear)).BeginInit();
             this.SuspendLayout();
             // 
@@ -212,7 +215,7 @@
             this.btnGetByTitle.Name = "btnGetByTitle";
             this.btnGetByTitle.Size = new System.Drawing.Size(42, 23);
             this.btnGetByTitle.TabIndex = 21;
-            this.btnGetByTitle.Text = "T";
+            this.btnGetByTitle.Text = "🔍";
             this.btnGetByTitle.UseVisualStyleBackColor = true;
             this.btnGetByTitle.Click += new System.EventHandler(this.btnGetByTitle_Click);
             // 
@@ -265,11 +268,44 @@
             this.isPainting.Text = "painting";
             this.isPainting.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(66, 411);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(44, 23);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "Json";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(22, 411);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(37, 23);
+            this.button2.TabIndex = 28;
+            this.button2.Text = "CSV";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(20, 393);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(80, 15);
+            this.label8.TabIndex = 29;
+            this.label8.Text = "Save raport as";
+            // 
             // VizualiseArtsManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.isPainting);
             this.Controls.Add(this.nnumericYear);
             this.Controls.Add(this.label6);
@@ -327,5 +363,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown nnumericYear;
         private System.Windows.Forms.CheckBox isPainting;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label8;
     }
 }

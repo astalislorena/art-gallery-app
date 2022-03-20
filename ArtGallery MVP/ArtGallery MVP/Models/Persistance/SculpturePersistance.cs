@@ -1,11 +1,15 @@
-﻿using System;
+﻿using ServiceStack.Text;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
+using JsonSerializer = System.Text.Json.JsonSerializer;
+using XmlSerializer = System.Xml.Serialization.XmlSerializer;
 
 namespace ArtGallery_MVP.Models.Persistance
 {
@@ -107,6 +111,20 @@ namespace ArtGallery_MVP.Models.Persistance
                     item.Type = sculpture.Type;
                 }
             }
+        }
+
+        public void SaveAsJSON()
+        {
+            string fileName = "Sculptures.json";
+            string jsonString = JsonSerializer.Serialize(Arts);
+            File.WriteAllText(fileName, jsonString);
+        }
+
+        public void SaveAsCSV()
+        {
+            string fileName = "Sculptures.csv";
+            string jsonString = CsvSerializer.SerializeToCsv(Arts);
+            File.WriteAllText(fileName, jsonString);
         }
     }
 }
