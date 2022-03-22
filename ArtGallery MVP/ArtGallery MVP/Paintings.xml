@@ -28,11 +28,11 @@
     <Type>Baroque</Type>
     <Technique>Oil Painting</Technique>
   </Painting>
-	<Painting>
-		<Title>Guernica</Title>
-		<ArtistName>Pablo Picasso</ArtistName>
-		<Year>1937</Year>
-		<Type>Cubism</Type>
-		<Technique>Oil Painting</Technique>
-	</Painting>
+  <Painting>
+    <Title>Guernica</Title>
+    <ArtistName>Pablo Picasso</ArtistName>
+    <Year>1937</Year>
+    <Type>Cubism</Type>
+    <Technique>Oil Painting</Technique>
+  </Painting>
 </ArrayOfPainting>
