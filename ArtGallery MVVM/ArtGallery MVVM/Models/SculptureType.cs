@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ArtGallery_MVP.Models
 {
-    enum SculptureType
+    public enum SculptureType
     {
         Sculpture,
         Assembling,

@@ -1,21 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ArtGallery_MVP.Models
 {
+    [Table("sculpture")]
     public class Sculpture : Art
     {
-        public string Type { get; set; } = "unknown";
+        public string Type { get; set; } = "Unknown";
 
-        public Sculpture()
+        public Sculpture() : base()
         {
-            this.Type = "unknown";
-        }  
+            this.Type = "Unknown";
+        }
 
-        public Sculpture(String title, String artistName, int year, string type) : base(title, artistName, year)
+        public Sculpture(string title, string artistName, int year, string type) : base(title, artistName, year)
         {
             this.Type = type;
         }
@@ -26,7 +28,7 @@ namespace ArtGallery_MVP.Models
             result[0] = this.Title;
             result[1] = this.ArtistName;
             result[2] = this.Year < 0 ? (-this.Year).ToString() + " BC" : this.Year.ToString();
-            result[3] = this.Type;
+            result[3] = this.Type.ToString();
             return result;
         }
     }

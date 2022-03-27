@@ -52,3 +52,9 @@ Mkfile.old
 dkms.conf
 ArtGallery MVP/ArtGallery MVP/obj/
 ArtGallery MVP/ArtGallery MVP/bin/Debug/net5.0-windows/
+ArtGallery MVVM/ArtGallery MVVM/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs
+ArtGallery MVVM/ArtGallery MVVM/obj/Debug/ArtGallery MVVM.csproj.CopyComplete
+ArtGallery MVVM/ArtGallery MVVM/obj/
+ArtGallery MVVM/ArtGallery MVVM/bin/
+ArtGallery MVVM/packages/Microsoft.Bcl.AsyncInterfaces.1.1.1/lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.xml
+ArtGallery MVVM/packages/

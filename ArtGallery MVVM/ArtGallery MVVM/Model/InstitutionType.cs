@@ -6,14 +6,10 @@ using System.Threading.Tasks;
 
 namespace ArtGallery_MVP.Models
 {
-    public enum SculptureType
+    enum InstitutionType
     {
-        Sculpture,
-        Assembling,
-        Carving,
-        Modeling,
-        Casting,
-        VintageSculpture,
+        ArtGallery,
+        Museum,
         Unknown
     }
 }

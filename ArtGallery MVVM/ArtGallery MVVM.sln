@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArtGallery MVVM", "ArtGallery MVVM\ArtGallery MVVM.csproj", "{33A7D20A-E462-48B8-A04B-3CA8A8EC89EB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArtGallery MVVM", "ArtGallery MVVM\ArtGallery MVVM.csproj", "{1194CCCF-399B-41F7-9AB6-7E15C756F73E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{33A7D20A-E462-48B8-A04B-3CA8A8EC89EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{33A7D20A-E462-48B8-A04B-3CA8A8EC89EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{33A7D20A-E462-48B8-A04B-3CA8A8EC89EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{33A7D20A-E462-48B8-A04B-3CA8A8EC89EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1194CCCF-399B-41F7-9AB6-7E15C756F73E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1194CCCF-399B-41F7-9AB6-7E15C756F73E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1194CCCF-399B-41F7-9AB6-7E15C756F73E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1194CCCF-399B-41F7-9AB6-7E15C756F73E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {9F0F82F4-B3A2-4652-B954-3E297D006D2E}
+		SolutionGuid = {5CB6E329-D38D-4438-AA98-639FDA96FEA2}
 	EndGlobalSection
 EndGlobal

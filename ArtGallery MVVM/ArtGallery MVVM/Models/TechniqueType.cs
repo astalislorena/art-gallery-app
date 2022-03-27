@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ArtGallery_MVP.Models
 {
-    enum TechniqueType
+    public enum TechniqueType
     {
         Pencil,
         Oil, 
