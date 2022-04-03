@@ -1,72 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ArtGallery_MVP.Models
 {
-    internal class Institution
+    [Table("instutution")]
+    public class Institution
     {
-        private String name;
-        private String location;
-        private InstitutionType type;
-        private Art[] arts;
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Location { get; set; }
+        public virtual ICollection<Painting> Paintings { get; set; }
+        public virtual ICollection<Sculpture> Sculptures { get; set; }
 
         public Institution()
         {
-            this.name = "";
-            this.location = "";
-            this.type = InstitutionType.Unknown;
-            this.arts = new Art[1];
-        }
-
-        public Institution(String name, String location, InstitutionType type, Art[] arts)
-        {
-            this.name = name;   
-            this.location = location;   
-            this.type = type;
-            this.arts = arts;
-        }
-
-        public String getName()
-        {
-            return this.name;
-        }
-
-        public String GetLocation()
-        {
-            return this.location;
-        }
-
-        public InstitutionType GetType()
-        {
-            return type;
-        }
-
-        public Art[] GetArts()
-        {
-            return arts;
-        }
-
-        public void SetName(String name)
-        {
-            this.name = name;
-        }
-
-        public void SetLocation(String location)
-        {
-            this.location = location;
-        }
-
-        public void SetType(InstitutionType type)
-        {
-            this.type = type;
-        }
-
-        public void SetArts(Art[] arts)
-        {
-            this.arts = arts;
+            this.Id = 0;
+            this.Name = "";
+            this.Location = "";
+            this.Paintings = new List<Painting>();
+            this.Sculptures = new List<Sculpture>();
         }
     }
 }

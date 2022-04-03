@@ -9,9 +9,11 @@ namespace ArtGallery_MVP.Models.Persistance
 {
     public class ArtGalleryDbContext : DbContext
     {
+        public static ArtGalleryDbContext instance { get; private set; } = new ArtGalleryDbContext();
         public DbSet<Painting> Paintings { get; set; }
         public DbSet<Sculpture> Sculptures { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Institution> Institutions { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

@@ -166,6 +166,7 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -181,17 +182,44 @@
     <Compile Include="Migrations\20220327180801_init.designer.cs">
       <DependentUpon>20220327180801_init.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20220329143707_institution.cs" />
+    <Compile Include="Migrations\20220329143707_institution.designer.cs">
+      <DependentUpon>20220329143707_institution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20220329143959_institution1.cs" />
+    <Compile Include="Migrations\20220329143959_institution1.designer.cs">
+      <DependentUpon>20220329143959_institution1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20220329144228_institution2.cs" />
+    <Compile Include="Migrations\20220329144228_institution2.designer.cs">
+      <DependentUpon>20220329144228_institution2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20220329144504_institution3.cs" />
+    <Compile Include="Migrations\20220329144504_institution3.designer.cs">
+      <DependentUpon>20220329144504_institution3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\ArtGalleryDbContextModelSnapshot.cs" />
     <Compile Include="Model\Art.cs" />
     <Compile Include="Model\Persistance\ArtGalleryDbContext.cs" />
-    <Compile Include="Model\Persistance\PaintingProvider.cs" />
-    <Compile Include="Model\Persistance\SculptureProvider.cs" />
-    <Compile Include="Model\Persistance\StaffProvider.cs" />
-    <Compile Include="View\ArtGalleryView.cs">
+    <Compile Include="ViewModel\ArtGalleryStatisticViewModel\ArtGalleryStatisticViewModel.cs" />
+    <Compile Include="ViewModel\ArtsManagement\ArtGalleryManagementViewModel.cs" />
+    <Compile Include="ViewModel\Commands\AddPaitingToInstitutionCommand.cs" />
+    <Compile Include="ViewModel\Commands\AddSculptureToInstitutionCommand.cs" />
+    <Compile Include="ViewModel\Commands\ConfigureChartCommand.cs" />
+    <Compile Include="ViewModel\Commands\ICommand.cs" />
+    <Compile Include="ViewModel\Commands\LoginCommand.cs" />
+    <Compile Include="ViewModel\Commands\SaveArtsCommand.cs" />
+    <Compile Include="ViewModel\Commands\SaveStaffCommand.cs" />
+    <Compile Include="ViewModel\Commands\SearchPaintingsCommand.cs" />
+    <Compile Include="ViewModel\Commands\SearchSculpturesCommand.cs" />
+    <Compile Include="ViewModel\Commands\ShowAllArtsCommand.cs" />
+    <Compile Include="ViewModel\Commands\ShowStatisticsCommand.cs" />
+    <Compile Include="ViewModel\StaffManagement\StaffManagementViewModel.cs" />
+    <Compile Include="View\ArtGalleryManagementView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\ArtGalleryView.Designer.cs">
-      <DependentUpon>ArtGalleryView.cs</DependentUpon>
+    <Compile Include="View\ArtGalleryManagementView.Designer.cs">
+      <DependentUpon>ArtGalleryManagementView.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Institution.cs" />
     <Compile Include="Model\InstitutionType.cs" />
@@ -204,6 +232,18 @@
     <Compile Include="Model\TechniqueType.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\UserType.cs" />
+    <Compile Include="View\ArtsStatisticView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ArtsStatisticView.Designer.cs">
+      <DependentUpon>ArtsStatisticView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\StaffManagementView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\StaffManagementView.Designer.cs">
+      <DependentUpon>StaffManagementView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -213,11 +253,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\ArtGalleryView.resx">
-      <DependentUpon>ArtGalleryView.cs</DependentUpon>
+    <EmbeddedResource Include="View\ArtGalleryManagementView.resx">
+      <DependentUpon>ArtGalleryManagementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ArtsStatisticView.resx">
+      <DependentUpon>ArtsStatisticView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\StaffManagementView.resx">
+      <DependentUpon>StaffManagementView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ArtGallery_MVP.Models.Art.datasource" />
+    <None Include="Properties\DataSources\ArtGallery_MVP.Models.Institution.datasource" />
     <None Include="Properties\DataSources\ArtGallery_MVP.Models.Painting.datasource" />
     <None Include="Properties\DataSources\ArtGallery_MVP.Models.Sculpture.datasource" />
     <None Include="Properties\DataSources\ArtGallery_MVP.Models.User.datasource" />

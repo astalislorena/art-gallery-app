@@ -1,0 +1,216 @@
+﻿++Solution 'ArtGallery MVVM' ‎(1 of 1 project)
+i:{00000000-0000-0000-0000-000000000000}:ArtGallery MVVM.sln
+++ArtGallery MVVM
+i:{00000000-0000-0000-0000-000000000000}:ArtGallery MVVM
+++Properties
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\properties\
+++DataSources
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\properties\datasources\
+++AssemblyInfo.cs
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\properties\assemblyinfo.cs
+++Resources.resx
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\properties\resources.resx
+++Settings.settings
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\properties\settings.settings
+++References
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++Migrations
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\migrations\
+++20220327180801_init.cs
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\migrations\20220327180801_init.cs
+++ArtGalleryDbContextModelSnapshot.cs
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\migrations\artgallerydbcontextmodelsnapshot.cs
+++Model
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\model\
+++Persistance
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\model\persistance\
+++ArtGalleryDbContext.cs
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\model\persistance\artgallerydbcontext.cs
+++PaintingProvider.cs
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\model\persistance\paintingprovider.cs
+++SculptureProvider.cs
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\model\persistance\sculptureprovider.cs
+++StaffProvider.cs
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\model\persistance\staffprovider.cs
+++Art.cs
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\model\art.cs
+++Institution.cs
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\model\institution.cs
+++InstitutionType.cs
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\model\institutiontype.cs
+++Painting.cs
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\model\painting.cs
+++PaintingType.cs
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\model\paintingtype.cs
+++Program.cs
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\model\program.cs
+++Sculpture.cs
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\model\sculpture.cs
+++SculptureType.cs
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\model\sculpturetype.cs
+++TechniqueType.cs
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\model\techniquetype.cs
+++User.cs
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\model\user.cs
+++UserType.cs
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\model\usertype.cs
+++View
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\view\
+++ArtGalleryManagementView.cs
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\view\artgallerymanagementview.cs
+++ArtGalleryManagementView.Designer.cs
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\view\artgallerymanagementview.designer.cs
+++ArtGalleryManagementView.resx
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\view\artgallerymanagementview.resx
+++StaffManagementView.cs
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\view\staffmanagementview.cs
+++StaffManagementView.Designer.cs
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\view\staffmanagementview.designer.cs
+++StaffManagementView.resx
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\view\staffmanagementview.resx
+++ViewModel
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\viewmodel\
+++ArtsManagement
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\viewmodel\artsmanagement\
+++ArtGalleryManagementViewModel.cs
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\viewmodel\artsmanagement\artgallerymanagementviewmodel.cs
+++Commands
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\viewmodel\commands\
+++ICommand.cs
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\viewmodel\commands\icommand.cs
+++SaveArtsCommand.cs
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\viewmodel\commands\saveartscommand.cs
+++SaveStaffCommand.cs
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\viewmodel\commands\savestaffcommand.cs
+++StaffManagement
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\viewmodel\staffmanagement\
+++StaffManagementViewModel.cs
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\viewmodel\staffmanagement\staffmanagementviewmodel.cs
+++App.config
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\app.config
+++packages.config
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\packages.config
+++ArtGallery_MVP.Models.Art.datasource
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\properties\datasources\artgallery_mvp.models.art.datasource
+++ArtGallery_MVP.Models.Painting.datasource
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\properties\datasources\artgallery_mvp.models.painting.datasource
+++ArtGallery_MVP.Models.Sculpture.datasource
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\properties\datasources\artgallery_mvp.models.sculpture.datasource
+++ArtGallery_MVP.Models.User.datasource
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\properties\datasources\artgallery_mvp.models.user.datasource
+++Resources.Designer.cs
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\properties\resources.designer.cs
+++Settings.Designer.cs
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\properties\settings.designer.cs
+++Microsoft.Bcl.AsyncInterfaces
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++Microsoft.Bcl.HashCode
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++Microsoft.CSharp
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++Microsoft.Data.SqlClient
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++Microsoft.EntityFrameworkCore
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++Microsoft.EntityFrameworkCore.Abstractions
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++Microsoft.EntityFrameworkCore.Design
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++Microsoft.EntityFrameworkCore.Relational
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++Microsoft.EntityFrameworkCore.SqlServer
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++Microsoft.Extensions.Caching.Abstractions
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++Microsoft.Extensions.Caching.Memory
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++Microsoft.Extensions.Configuration
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++Microsoft.Extensions.Configuration.Abstractions
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++Microsoft.Extensions.Configuration.Binder
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++Microsoft.Extensions.DependencyInjection
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++Microsoft.Extensions.DependencyInjection.Abstractions
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++Microsoft.Extensions.Logging
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++Microsoft.Extensions.Logging.Abstractions
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++Microsoft.Extensions.Options
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++Microsoft.Extensions.Primitives
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++Microsoft.Identity.Client
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++Microsoft.IdentityModel.JsonWebTokens
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++Microsoft.IdentityModel.Logging
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++Microsoft.IdentityModel.Protocols
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++Microsoft.IdentityModel.Protocols.OpenIdConnect
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++Microsoft.IdentityModel.Tokens
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++Newtonsoft.Json
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++Npgsql
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++Npgsql.EntityFrameworkCore.PostgreSQL
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++System
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++System.Buffers
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++System.Collections.Immutable
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++System.ComponentModel.Annotations
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++System.ComponentModel.DataAnnotations
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++System.Core
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++System.Data
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++System.Data.Common
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++System.Data.DataSetExtensions
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++System.Deployment
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++System.Diagnostics.DiagnosticSource
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++System.Drawing
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++System.IdentityModel
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++System.IdentityModel.Tokens.Jwt
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++System.Memory
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++System.Net.Http
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++System.Numerics
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++System.Numerics.Vectors
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++System.Runtime.CompilerServices.Unsafe
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++System.Text.Encodings.Web
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++System.Text.Json
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++System.Threading.Tasks.Extensions
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++System.ValueTuple
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++System.Windows.Forms
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++System.Xml
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++System.Xml.Linq
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:
+++20220327180801_init.designer.cs
+i:{1194cccf-399b-41f7-9ab6-7e15c756f73e}:s:\utcn\ps\project\project\artgallery mvvm\artgallery mvvm\migrations\20220327180801_init.designer.cs

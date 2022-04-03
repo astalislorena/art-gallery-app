@@ -16,7 +16,7 @@ namespace ArtGallery_MVVM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ArtGalleryView());
+            Application.Run(new ArtGalleryManagementView());
         }
     }
 }
