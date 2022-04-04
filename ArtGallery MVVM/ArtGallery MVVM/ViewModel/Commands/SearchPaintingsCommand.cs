@@ -23,7 +23,7 @@ namespace ArtGallery_MVVM.ViewModel.Commands
             List<Painting> paintings = new List<Painting>();
             foreach(var painting in ArtGalleryDbContext.instance.Paintings.ToList())
             {
-                if(painting.Title.Contains(_viewModel.SearchPaintings) || painting.ArtistName.Contains(_viewModel.SearchPaintings))
+                if(painting.Title.Contains(_viewModel.SearchSculptures) || painting.ArtistName.Contains(_viewModel.SearchSculptures))
                     paintings.Add(painting);
             }
             _viewModel.paintingBindingSource.DataSource = paintings;

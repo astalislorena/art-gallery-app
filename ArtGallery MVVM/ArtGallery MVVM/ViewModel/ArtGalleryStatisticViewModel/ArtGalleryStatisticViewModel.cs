@@ -12,12 +12,15 @@ namespace ArtGallery_MVVM.ViewModel
     public class ArtGalleryStatisticViewModel
     {
         public Chart arts;
+        public Chart institution;
+        public string InstitutionId { get; set; }
         public ICommand ConfigureChartCommand;
-        
+        public ICommand ConfigureInstitutionChartCommand;
 
         public ArtGalleryStatisticViewModel()
         {
             this.ConfigureChartCommand = new ConfigureChartCommand(this);
+            this.ConfigureInstitutionChartCommand = new GenerateInstitutionStatisticCommand(this);
         }
     }
 }

@@ -206,6 +206,7 @@
     <Compile Include="ViewModel\Commands\AddPaitingToInstitutionCommand.cs" />
     <Compile Include="ViewModel\Commands\AddSculptureToInstitutionCommand.cs" />
     <Compile Include="ViewModel\Commands\ConfigureChartCommand.cs" />
+    <Compile Include="ViewModel\Commands\GenerateInstitutionStatisticCommand.cs" />
     <Compile Include="ViewModel\Commands\ICommand.cs" />
     <Compile Include="ViewModel\Commands\LoginCommand.cs" />
     <Compile Include="ViewModel\Commands\SaveArtsCommand.cs" />

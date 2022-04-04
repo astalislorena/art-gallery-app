@@ -20,11 +20,14 @@ namespace ArtGallery_MVVM.View
             InitializeComponent();
             this.viewModel = new ArtGalleryStatisticViewModel();
             this.viewModel.arts = this.artsChart;
+            this.viewModel.institution = this.institutionChart;
         }
 
         private void ArtsStatisticView_Load(object sender, EventArgs e)
         {
             this.viewModel.ConfigureChartCommand.Execute();
+            this.buttonGenerateInstitutionChart.Click += delegate { viewModel.ConfigureInstitutionChartCommand.Execute(); };
+            this.numericUpDownInstitutionId.DataBindings.Add("Text", this.viewModel, "InstitutionId", false, DataSourceUpdateMode.OnValidation);
         }
     }
 }
