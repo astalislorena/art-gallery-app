@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ArtGallery_MVVM.Properties
+namespace ArtGallery_MVC.Properties
 {
 
 

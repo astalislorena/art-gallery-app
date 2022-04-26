@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ArtGallery_MVP.Models
+namespace ArtGallery_MVC.Model
 {
-    enum InstitutionType
+    public interface Observer
     {
-        ArtGallery,
-        Museum,
-        Unknown
+        void Update();
     }
 }

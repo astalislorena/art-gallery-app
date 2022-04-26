@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 
 
-namespace ArtGallery_MVP.Models
+namespace ArtGallery_MVC.Model
 {
     [Table("painting")]
     public class Painting : Art

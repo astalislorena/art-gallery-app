@@ -1,10 +1,12 @@
-﻿using System;
+﻿using ArtGallery_MVC.Controller;
+using ArtGallery_MVC.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ArtGallery_MVVM
+namespace ArtGallery_MVC
 {
     internal static class Program
     {
@@ -16,7 +18,10 @@ namespace ArtGallery_MVVM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ArtGalleryManagementView());
+            ArtsModel artsModel = new ArtsModel();
+            ArtGalleryManagementView artsView = new ArtGalleryManagementView(artsModel);
+            ArtsController controller = artsView.controller;
+            Application.Run(controller.view);  
         }
     }
 }

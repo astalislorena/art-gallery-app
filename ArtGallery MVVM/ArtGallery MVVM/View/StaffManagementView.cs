@@ -1,5 +1,6 @@
-﻿using ArtGallery_MVP.Models.Persistance;
-using ArtGallery_MVVM.ViewModel.StaffManagement;
+﻿using ArtGallery_MVC.Controller;
+using ArtGallery_MVC.Model;
+using ArtGallery_MVC.Model.Persistance;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -11,17 +12,36 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ArtGallery_MVVM.View
+namespace ArtGallery_MVC.View
 {
-    public partial class StaffManagementView : Form
+    public partial class StaffManagementView : Form, Observer
     {
-        readonly StaffManagementViewModel _viewModel;
-        public StaffManagementView()
+
+        public UsersModel users { get; set; }
+        public StaffController controller { get; set; }
+
+        public StaffManagementView(UsersModel users)
         {
             InitializeComponent();
-            _viewModel = new StaffManagementViewModel();
-            _viewModel.staffDataGridView = this.staffDataGridView;
-            this.saveButton.Click += delegate { _viewModel.Save.Execute(); };
+            this.users = users;
+            this.controller = new StaffController(this);
+            this.users.Add(this);
+            this.users.Add(this.controller);
+        }
+
+        public Button GetSaveButton()
+        {
+            return this.saveButton;
+        }
+
+        public DataGridView GetUsersDataGrid()
+        {
+            return this.staffDataGridView;
+        }
+
+        public BindingSource GetUsersBindingSource()
+        {
+            return this.userBindingSource;
         }
 
         protected override void OnLoad(EventArgs e)

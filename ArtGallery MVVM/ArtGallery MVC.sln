@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArtGallery MVVM", "ArtGallery MVVM\ArtGallery MVVM.csproj", "{1194CCCF-399B-41F7-9AB6-7E15C756F73E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArtGallery MVC", "ArtGallery MVVM\ArtGallery MVC.csproj", "{1194CCCF-399B-41F7-9AB6-7E15C756F73E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

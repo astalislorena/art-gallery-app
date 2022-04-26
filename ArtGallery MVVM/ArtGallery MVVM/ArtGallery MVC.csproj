@@ -178,6 +178,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\ArtsController.cs" />
+    <Compile Include="Controller\StaffController.cs" />
     <Compile Include="Migrations\20220327180801_init.cs" />
     <Compile Include="Migrations\20220327180801_init.designer.cs">
       <DependentUpon>20220327180801_init.cs</DependentUpon>
@@ -200,22 +202,13 @@
     </Compile>
     <Compile Include="Migrations\ArtGalleryDbContextModelSnapshot.cs" />
     <Compile Include="Model\Art.cs" />
+    <Compile Include="Model\Arts.cs" />
+    <Compile Include="Model\Institutions.cs" />
+    <Compile Include="Model\ArtsModel.cs" />
+    <Compile Include="Model\Observer.cs" />
     <Compile Include="Model\Persistance\ArtGalleryDbContext.cs" />
-    <Compile Include="ViewModel\ArtGalleryStatisticViewModel\ArtGalleryStatisticViewModel.cs" />
-    <Compile Include="ViewModel\ArtsManagement\ArtGalleryManagementViewModel.cs" />
-    <Compile Include="ViewModel\Commands\AddPaitingToInstitutionCommand.cs" />
-    <Compile Include="ViewModel\Commands\AddSculptureToInstitutionCommand.cs" />
-    <Compile Include="ViewModel\Commands\ConfigureChartCommand.cs" />
-    <Compile Include="ViewModel\Commands\GenerateInstitutionStatisticCommand.cs" />
-    <Compile Include="ViewModel\Commands\ICommand.cs" />
-    <Compile Include="ViewModel\Commands\LoginCommand.cs" />
-    <Compile Include="ViewModel\Commands\SaveArtsCommand.cs" />
-    <Compile Include="ViewModel\Commands\SaveStaffCommand.cs" />
-    <Compile Include="ViewModel\Commands\SearchPaintingsCommand.cs" />
-    <Compile Include="ViewModel\Commands\SearchSculpturesCommand.cs" />
-    <Compile Include="ViewModel\Commands\ShowAllArtsCommand.cs" />
-    <Compile Include="ViewModel\Commands\ShowStatisticsCommand.cs" />
-    <Compile Include="ViewModel\StaffManagement\StaffManagementViewModel.cs" />
+    <Compile Include="Model\Users.cs" />
+    <Compile Include="Model\UsersModel.cs" />
     <Compile Include="View\ArtGalleryManagementView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,22 +216,12 @@
       <DependentUpon>ArtGalleryManagementView.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Institution.cs" />
-    <Compile Include="Model\InstitutionType.cs" />
     <Compile Include="Model\Painting.cs" />
-    <Compile Include="Model\PaintingType.cs" />
-    <Compile Include="Model\Program.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Model\Sculpture.cs" />
-    <Compile Include="Model\SculptureType.cs" />
-    <Compile Include="Model\TechniqueType.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\UserType.cs" />
-    <Compile Include="View\ArtsStatisticView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\ArtsStatisticView.Designer.cs">
-      <DependentUpon>ArtsStatisticView.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\StaffManagementView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,9 +239,6 @@
     </Compile>
     <EmbeddedResource Include="View\ArtGalleryManagementView.resx">
       <DependentUpon>ArtGalleryManagementView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\ArtsStatisticView.resx">
-      <DependentUpon>ArtsStatisticView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\StaffManagementView.resx">
       <DependentUpon>StaffManagementView.cs</DependentUpon>

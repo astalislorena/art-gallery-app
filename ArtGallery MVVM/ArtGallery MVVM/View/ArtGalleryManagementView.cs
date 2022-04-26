@@ -1,6 +1,7 @@
-﻿using ArtGallery_MVP.Models.Persistance;
-using ArtGallery_MVVM.View;
-using ArtGallery_MVVM.ViewModel;
+﻿using ArtGallery_MVC.Model.Persistance;
+using ArtGallery_MVC.Controller;
+using ArtGallery_MVC.Model;
+using ArtGallery_MVC.View;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -11,17 +12,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
+using ArtGallery_MVC.Model;
 
-namespace ArtGallery_MVVM
+namespace ArtGallery_MVC
 {
-    public partial class ArtGalleryManagementView : Form
+    public partial class ArtGalleryManagementView : Form, Observer
     {
-        private ArtGalleryManagementViewModel viewModel;
-        public ArtGalleryManagementView()
+        public ArtsModel arts { get; set; }
+        public ArtsController controller { get; set; }
+        public ArtGalleryManagementView(ArtsModel arts)
         {
             InitializeComponent();
-            this.viewModel = new ArtGalleryManagementViewModel();
-            this.AddViewComponentsToViewModel();
+            this.arts = arts;
+            this.controller = new ArtsController(this);
+            this.arts.Add(this);
+            this.arts.Add(this.controller);
         }
 
         protected override void OnLoad(EventArgs e)
@@ -41,36 +47,156 @@ namespace ArtGallery_MVVM
             ArtGalleryDbContext.instance.Dispose();
         }
 
-        private void AddViewComponentsToViewModel()
+        public BindingSource GetPaintingBindingSearch()
         {
-            this.viewModel.paintingBindingSource = this.paintingBindingSource;
-            this.viewModel.sculptureBindingSource = this.sculptureBindingSource;
-            this.viewModel.institutionBindingSource = this.institutionBindingSource;
-            this.saveButton.Click += delegate { viewModel.SaveCommand.Execute(); };
-            this.viewModel.saveButton = this.saveButton;
-            this.loginButton.Click += delegate { viewModel.LoginCommand.Execute(); };
-            this.viewModel.loginButton = this.loginButton;
-            this.searchPaintingsButton.Click += delegate { viewModel.SearchPaintingsCommand.Execute(); };
-            this.searchSculpturesButton.Click += delegate {  viewModel.SearchSculpturessCommand.Execute(); };
-            this.addPaintingButton.Click += delegate {  viewModel.AddPaintingToInstitutionCommand.Execute(); };
-            this.viewModel.addPaintingToInstitutionButton = this.addPaintingButton;
-            this.addSculptureButton.Click += delegate { viewModel.AddSculptureToInstitutionCommand.Execute(); };
-            this.viewModel.addSculptureToInstitutionButton = this.addSculptureButton;
-            this.viewModel.sculptureDataGridView = this.sculptureDataGridView;
-            this.viewModel.paintingDataGridView = this.paintingDataGridView;
-            this.viewModel.institutionDataGridView = this.institutionDataGridView;
-            this.showStatisticButton.Click += delegate { viewModel.ShowStatisticsCommand.Execute(); };
-            this.showAllPaintingsButton.Click += delegate { viewModel.ShowAllArtsCommand.Execute(); };
-            this.showAllSculpturesButton.Click += delegate { viewModel.ShowAllArtsCommand.Execute(); };
-            this.viewModel.showStatisticButton = this.showStatisticButton;
-            this.emailTextField.DataBindings.Add("Text", this.viewModel, "UserEmail", false, DataSourceUpdateMode.OnValidation);
-            this.passwordTextField.DataBindings.Add("Text", this.viewModel, "UserPassword", false, DataSourceUpdateMode.OnValidation);
-            this.searchPaintingsTextField.DataBindings.Add("Text", this.viewModel, "SearchPaintings", false, DataSourceUpdateMode.OnValidation);
-            this.searchSculpturesTextField.DataBindings.Add("Text", this.viewModel, "SearchSculptures", false, DataSourceUpdateMode.OnValidation);
-            this.numericUpDownInstututionId.DataBindings.Add("Text", this.viewModel, "InstitutionId", false, DataSourceUpdateMode.OnValidation);
-            this.numericUpDownPaintingId.DataBindings.Add("Text", this.viewModel, "PaintingId", false, DataSourceUpdateMode.OnValidation);
-            this.numericUpDownSculptureId.DataBindings.Add("Text", this.viewModel, "SculptureId", false, DataSourceUpdateMode.OnValidation);
+            return this.paintingBindingSource;
         }
 
+        public BindingSource GetSculptureBindingSource()
+        {
+            return this.sculptureBindingSource;
+        }
+
+        public BindingSource GetInstitutionBindingSource()
+        {
+            return this.institutionBindingSource;
+        }
+
+        public Button GetSaveButton()
+        {
+            return this.saveButton;
+        }
+
+        public Button GetShowAllPaintingsButton()
+        {
+            return this.showAllPaintingsButton;
+        }
+
+        public Button GetShowAllSculpturesButton()
+        {
+            return this.showAllSculpturesButton;
+        }
+
+        public Button GetLoginButton()
+        {
+            return this.loginButton;
+        }
+
+        public Button GetSearchPaintingsButton()
+        {
+            return this.searchPaintingsButton;
+        }
+
+        public Button GetSearchSculpturesButton()
+        {
+            return this.searchSculpturesButton;
+        }
+
+        public Button GetAddPaintingToInstitutionButton()
+        {
+            return this.addPaintingButton;
+        }
+
+        public Button GetAddSculptureToInstitutionButton()
+        {
+            return this.addSculptureButton;
+        }
+
+        public Button GetShowStatisticButton()
+        {
+            return this.showStatisticButton;
+        }
+
+        public Button GetInstitutionStatisticButton()
+        {
+            return this.buttonGenerateInstitutionChart;
+        }
+
+        public DataGridView GetPaintingDataGridView()
+        {
+            return this.paintingDataGridView;
+        }
+
+        public DataGridView GetSculptureDataGridView()
+        {
+            return this.sculptureDataGridView;
+        }
+
+        public DataGridView GetInstitutionDataGridView()
+        {
+            return this.institutionDataGridView;
+        }
+
+        public Chart GetChart()
+        {
+            return this.artsChart;
+        }
+
+        public Chart GetInstitutionChart()
+        {
+            return this.institutionChart;
+        }
+
+        public string SearchPaintings 
+        {   get
+            {
+                return searchPaintingsTextField.Text;
+            }
+        }
+
+        public string SearchSculptures
+        {
+            get
+            {
+                return searchSculpturesTextField.Text;
+            }
+        }
+
+        public string InstitutionId
+        {
+            get
+            {
+                return numericUpDownInstututionId.Text;
+            }
+        }
+
+        public string PaintingId
+        {
+            get
+            {
+                return numericUpDownPaintingId.Text;
+            }
+        }
+
+        public string SculptureId
+        {
+            get
+            {
+                return numericUpDownSculptureId.Text;
+            }
+        }
+
+        public string Email
+        {
+            get
+            {
+                return emailTextField.Text;
+            }
+        }
+
+        public string Password
+        {
+            get
+            {
+                return passwordTextField.Text;
+            }
+        }
+        public string InstitutionIdChart
+        {
+            get
+            {
+                return numericUpDownInstitutionIdChart.Text;
+            }
+        }
     }
 }

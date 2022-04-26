@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace ArtGallery_MVVM.Migrations
+namespace ArtGallery_MVC.Migrations
 {
     public partial class institution1 : Migration
     {

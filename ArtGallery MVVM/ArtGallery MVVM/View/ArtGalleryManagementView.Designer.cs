@@ -1,4 +1,4 @@
-﻿namespace ArtGallery_MVVM
+﻿namespace ArtGallery_MVC
 {
     partial class ArtGalleryManagementView
     {
@@ -30,6 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ArtGalleryManagementView));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.saveButton = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
@@ -51,7 +57,7 @@
             this.searchPaintingsButton = new System.Windows.Forms.Button();
             this.searchPaintingsTextField = new System.Windows.Forms.TextBox();
             this.paintingDataGridView = new System.Windows.Forms.DataGridView();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.graphicsTab = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.loginButton = new System.Windows.Forms.Button();
@@ -59,7 +65,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.passwordTextField = new System.Windows.Forms.TextBox();
             this.emailTextField = new System.Windows.Forms.TextBox();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.showStatisticButton = new System.Windows.Forms.Button();
+            this.buttonGenerateInstitutionChart = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.numericUpDownInstitutionIdChart = new System.Windows.Forms.NumericUpDown();
+            this.institutionChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.artsChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.techniqueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,9 +88,8 @@
             this.idDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paintingsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sculpturesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.institutionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSculptureId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPaintingId)).BeginInit();
@@ -88,9 +99,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.sculptureDataGridView)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.paintingDataGridView)).BeginInit();
-            this.tabControl1.SuspendLayout();
+            this.graphicsTab.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownInstitutionIdChart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.institutionChart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.artsChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paintingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sculptureBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.institutionBindingSource)).BeginInit();
@@ -99,11 +114,12 @@
             // saveButton
             // 
             this.saveButton.Enabled = false;
-            this.saveButton.Location = new System.Drawing.Point(591, 476);
+            this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveButton.Location = new System.Drawing.Point(635, 2);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(75, 23);
+            this.saveButton.Size = new System.Drawing.Size(48, 33);
             this.saveButton.TabIndex = 4;
-            this.saveButton.Text = "Save";
+            this.saveButton.Text = " 💾";
             this.saveButton.UseVisualStyleBackColor = true;
             // 
             // tabPage4
@@ -120,7 +136,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(657, 435);
+            this.tabPage4.Size = new System.Drawing.Size(721, 471);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Institutions";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -128,7 +144,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(552, 129);
+            this.label5.Location = new System.Drawing.Point(613, 124);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 13);
             this.label5.TabIndex = 8;
@@ -137,7 +153,7 @@
             // addSculptureButton
             // 
             this.addSculptureButton.Enabled = false;
-            this.addSculptureButton.Location = new System.Drawing.Point(552, 174);
+            this.addSculptureButton.Location = new System.Drawing.Point(613, 169);
             this.addSculptureButton.Name = "addSculptureButton";
             this.addSculptureButton.Size = new System.Drawing.Size(98, 23);
             this.addSculptureButton.TabIndex = 7;
@@ -147,7 +163,7 @@
             // addPaintingButton
             // 
             this.addPaintingButton.Enabled = false;
-            this.addPaintingButton.Location = new System.Drawing.Point(552, 101);
+            this.addPaintingButton.Location = new System.Drawing.Point(613, 96);
             this.addPaintingButton.Name = "addPaintingButton";
             this.addPaintingButton.Size = new System.Drawing.Size(97, 23);
             this.addPaintingButton.TabIndex = 6;
@@ -157,7 +173,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(552, 57);
+            this.label4.Location = new System.Drawing.Point(613, 52);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 5;
@@ -166,7 +182,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(553, 11);
+            this.label3.Location = new System.Drawing.Point(614, 6);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 13);
             this.label3.TabIndex = 4;
@@ -174,21 +190,21 @@
             // 
             // numericUpDownSculptureId
             // 
-            this.numericUpDownSculptureId.Location = new System.Drawing.Point(552, 148);
+            this.numericUpDownSculptureId.Location = new System.Drawing.Point(613, 143);
             this.numericUpDownSculptureId.Name = "numericUpDownSculptureId";
             this.numericUpDownSculptureId.Size = new System.Drawing.Size(97, 20);
             this.numericUpDownSculptureId.TabIndex = 3;
             // 
             // numericUpDownPaintingId
             // 
-            this.numericUpDownPaintingId.Location = new System.Drawing.Point(552, 73);
+            this.numericUpDownPaintingId.Location = new System.Drawing.Point(613, 68);
             this.numericUpDownPaintingId.Name = "numericUpDownPaintingId";
             this.numericUpDownPaintingId.Size = new System.Drawing.Size(98, 20);
             this.numericUpDownPaintingId.TabIndex = 2;
             // 
             // numericUpDownInstututionId
             // 
-            this.numericUpDownInstututionId.Location = new System.Drawing.Point(552, 30);
+            this.numericUpDownInstututionId.Location = new System.Drawing.Point(613, 25);
             this.numericUpDownInstututionId.Name = "numericUpDownInstututionId";
             this.numericUpDownInstututionId.Size = new System.Drawing.Size(98, 20);
             this.numericUpDownInstututionId.TabIndex = 1;
@@ -200,14 +216,12 @@
             this.institutionDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn2,
             this.nameDataGridViewTextBoxColumn,
-            this.locationDataGridViewTextBoxColumn,
-            this.paintingsDataGridViewTextBoxColumn,
-            this.sculpturesDataGridViewTextBoxColumn});
+            this.locationDataGridViewTextBoxColumn});
             this.institutionDataGridView.DataSource = this.institutionBindingSource;
             this.institutionDataGridView.Enabled = false;
             this.institutionDataGridView.Location = new System.Drawing.Point(3, 6);
             this.institutionDataGridView.Name = "institutionDataGridView";
-            this.institutionDataGridView.Size = new System.Drawing.Size(543, 426);
+            this.institutionDataGridView.Size = new System.Drawing.Size(345, 426);
             this.institutionDataGridView.TabIndex = 0;
             // 
             // tabPage2
@@ -219,14 +233,14 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(657, 435);
+            this.tabPage2.Size = new System.Drawing.Size(721, 471);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Sculptures";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // showAllSculpturesButton
             // 
-            this.showAllSculpturesButton.Location = new System.Drawing.Point(557, 76);
+            this.showAllSculpturesButton.Location = new System.Drawing.Point(622, 58);
             this.showAllSculpturesButton.Name = "showAllSculpturesButton";
             this.showAllSculpturesButton.Size = new System.Drawing.Size(93, 23);
             this.showAllSculpturesButton.TabIndex = 4;
@@ -235,7 +249,7 @@
             // 
             // searchSculpturesButton
             // 
-            this.searchSculpturesButton.Location = new System.Drawing.Point(557, 47);
+            this.searchSculpturesButton.Location = new System.Drawing.Point(622, 29);
             this.searchSculpturesButton.Name = "searchSculpturesButton";
             this.searchSculpturesButton.Size = new System.Drawing.Size(93, 23);
             this.searchSculpturesButton.TabIndex = 3;
@@ -244,7 +258,7 @@
             // 
             // searchSculpturesTextField
             // 
-            this.searchSculpturesTextField.Location = new System.Drawing.Point(557, 21);
+            this.searchSculpturesTextField.Location = new System.Drawing.Point(622, 3);
             this.searchSculpturesTextField.Name = "searchSculpturesTextField";
             this.searchSculpturesTextField.Size = new System.Drawing.Size(93, 20);
             this.searchSculpturesTextField.TabIndex = 2;
@@ -263,7 +277,7 @@
             this.sculptureDataGridView.Location = new System.Drawing.Point(6, 6);
             this.sculptureDataGridView.Name = "sculptureDataGridView";
             this.sculptureDataGridView.ReadOnly = true;
-            this.sculptureDataGridView.Size = new System.Drawing.Size(544, 423);
+            this.sculptureDataGridView.Size = new System.Drawing.Size(610, 423);
             this.sculptureDataGridView.TabIndex = 1;
             // 
             // tabPage1
@@ -275,14 +289,14 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(657, 435);
+            this.tabPage1.Size = new System.Drawing.Size(721, 471);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Paintings";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // showAllPaintingsButton
             // 
-            this.showAllPaintingsButton.Location = new System.Drawing.Point(557, 61);
+            this.showAllPaintingsButton.Location = new System.Drawing.Point(622, 61);
             this.showAllPaintingsButton.Name = "showAllPaintingsButton";
             this.showAllPaintingsButton.Size = new System.Drawing.Size(92, 23);
             this.showAllPaintingsButton.TabIndex = 3;
@@ -291,7 +305,7 @@
             // 
             // searchPaintingsButton
             // 
-            this.searchPaintingsButton.Location = new System.Drawing.Point(557, 32);
+            this.searchPaintingsButton.Location = new System.Drawing.Point(622, 32);
             this.searchPaintingsButton.Name = "searchPaintingsButton";
             this.searchPaintingsButton.Size = new System.Drawing.Size(93, 23);
             this.searchPaintingsButton.TabIndex = 2;
@@ -302,7 +316,7 @@
             // 
             this.searchPaintingsTextField.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.searchPaintingsTextField.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.searchPaintingsTextField.Location = new System.Drawing.Point(556, 6);
+            this.searchPaintingsTextField.Location = new System.Drawing.Point(622, 6);
             this.searchPaintingsTextField.Name = "searchPaintingsTextField";
             this.searchPaintingsTextField.Size = new System.Drawing.Size(93, 20);
             this.searchPaintingsTextField.TabIndex = 1;
@@ -322,20 +336,21 @@
             this.paintingDataGridView.Location = new System.Drawing.Point(6, 6);
             this.paintingDataGridView.Name = "paintingDataGridView";
             this.paintingDataGridView.ReadOnly = true;
-            this.paintingDataGridView.Size = new System.Drawing.Size(544, 423);
+            this.paintingDataGridView.Size = new System.Drawing.Size(610, 459);
             this.paintingDataGridView.TabIndex = 0;
             // 
-            // tabControl1
+            // graphicsTab
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(12, 9);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(665, 461);
-            this.tabControl1.TabIndex = 5;
+            this.graphicsTab.Controls.Add(this.tabPage1);
+            this.graphicsTab.Controls.Add(this.tabPage2);
+            this.graphicsTab.Controls.Add(this.tabPage4);
+            this.graphicsTab.Controls.Add(this.tabPage3);
+            this.graphicsTab.Controls.Add(this.tabPage5);
+            this.graphicsTab.Location = new System.Drawing.Point(12, 39);
+            this.graphicsTab.Name = "graphicsTab";
+            this.graphicsTab.SelectedIndex = 0;
+            this.graphicsTab.Size = new System.Drawing.Size(729, 497);
+            this.graphicsTab.TabIndex = 5;
             // 
             // tabPage3
             // 
@@ -348,7 +363,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(657, 435);
+            this.tabPage3.Size = new System.Drawing.Size(721, 471);
             this.tabPage3.TabIndex = 4;
             this.tabPage3.Text = "Login";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -404,15 +419,91 @@
             this.emailTextField.Size = new System.Drawing.Size(196, 20);
             this.emailTextField.TabIndex = 0;
             // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.showStatisticButton);
+            this.tabPage5.Controls.Add(this.buttonGenerateInstitutionChart);
+            this.tabPage5.Controls.Add(this.label6);
+            this.tabPage5.Controls.Add(this.numericUpDownInstitutionIdChart);
+            this.tabPage5.Controls.Add(this.institutionChart);
+            this.tabPage5.Controls.Add(this.artsChart);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(721, 471);
+            this.tabPage5.TabIndex = 5;
+            this.tabPage5.Text = "Graphics";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
             // showStatisticButton
             // 
             this.showStatisticButton.Enabled = false;
-            this.showStatisticButton.Location = new System.Drawing.Point(510, 476);
+            this.showStatisticButton.Location = new System.Drawing.Point(640, 442);
             this.showStatisticButton.Name = "showStatisticButton";
             this.showStatisticButton.Size = new System.Drawing.Size(75, 23);
             this.showStatisticButton.TabIndex = 6;
             this.showStatisticButton.Text = "Show statistics";
             this.showStatisticButton.UseVisualStyleBackColor = true;
+            // 
+            // buttonGenerateInstitutionChart
+            // 
+            this.buttonGenerateInstitutionChart.Location = new System.Drawing.Point(609, 48);
+            this.buttonGenerateInstitutionChart.Name = "buttonGenerateInstitutionChart";
+            this.buttonGenerateInstitutionChart.Size = new System.Drawing.Size(94, 23);
+            this.buttonGenerateInstitutionChart.TabIndex = 9;
+            this.buttonGenerateInstitutionChart.Text = "See statistic";
+            this.buttonGenerateInstitutionChart.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(606, 6);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(63, 13);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Institution id";
+            // 
+            // numericUpDownInstitutionIdChart
+            // 
+            this.numericUpDownInstitutionIdChart.Location = new System.Drawing.Point(609, 22);
+            this.numericUpDownInstitutionIdChart.Name = "numericUpDownInstitutionIdChart";
+            this.numericUpDownInstitutionIdChart.Size = new System.Drawing.Size(94, 20);
+            this.numericUpDownInstitutionIdChart.TabIndex = 7;
+            // 
+            // institutionChart
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.institutionChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.institutionChart.Legends.Add(legend1);
+            this.institutionChart.Location = new System.Drawing.Point(357, 124);
+            this.institutionChart.Name = "institutionChart";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.institutionChart.Series.Add(series1);
+            this.institutionChart.Size = new System.Drawing.Size(358, 341);
+            this.institutionChart.TabIndex = 6;
+            this.institutionChart.Text = "chart1";
+            // 
+            // artsChart
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.artsChart.ChartAreas.Add(chartArea2);
+            this.artsChart.DataSource = this.paintingBindingSource;
+            legend2.Name = "Legend1";
+            this.artsChart.Legends.Add(legend2);
+            this.artsChart.Location = new System.Drawing.Point(6, 6);
+            this.artsChart.Name = "artsChart";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.artsChart.Series.Add(series2);
+            this.artsChart.Size = new System.Drawing.Size(333, 296);
+            this.artsChart.TabIndex = 5;
+            this.artsChart.Text = "chart1";
             // 
             // typeDataGridViewTextBoxColumn
             // 
@@ -458,7 +549,7 @@
             // 
             // paintingBindingSource
             // 
-            this.paintingBindingSource.DataSource = typeof(ArtGallery_MVP.Models.Painting);
+            this.paintingBindingSource.DataSource = typeof(ArtGallery_MVC.Model.Painting);
             // 
             // typeDataGridViewTextBoxColumn1
             // 
@@ -497,7 +588,7 @@
             // 
             // sculptureBindingSource
             // 
-            this.sculptureBindingSource.DataSource = typeof(ArtGallery_MVP.Models.Sculpture);
+            this.sculptureBindingSource.DataSource = typeof(ArtGallery_MVC.Model.Sculpture);
             // 
             // idDataGridViewTextBoxColumn2
             // 
@@ -517,31 +608,29 @@
             this.locationDataGridViewTextBoxColumn.HeaderText = "Location";
             this.locationDataGridViewTextBoxColumn.Name = "locationDataGridViewTextBoxColumn";
             // 
-            // paintingsDataGridViewTextBoxColumn
-            // 
-            this.paintingsDataGridViewTextBoxColumn.DataPropertyName = "Paintings";
-            this.paintingsDataGridViewTextBoxColumn.HeaderText = "Paintings";
-            this.paintingsDataGridViewTextBoxColumn.Name = "paintingsDataGridViewTextBoxColumn";
-            this.paintingsDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sculpturesDataGridViewTextBoxColumn
-            // 
-            this.sculpturesDataGridViewTextBoxColumn.DataPropertyName = "Sculptures";
-            this.sculpturesDataGridViewTextBoxColumn.HeaderText = "Sculptures";
-            this.sculpturesDataGridViewTextBoxColumn.Name = "sculpturesDataGridViewTextBoxColumn";
-            this.sculpturesDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // institutionBindingSource
             // 
-            this.institutionBindingSource.DataSource = typeof(ArtGallery_MVP.Models.Institution);
+            this.institutionBindingSource.DataSource = typeof(ArtGallery_MVC.Model.Institution);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "🇷🇴",
+            "🇬🇧",
+            "🇫🇷"});
+            this.comboBox1.Location = new System.Drawing.Point(689, 12);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(52, 21);
+            this.comboBox1.TabIndex = 6;
             // 
             // ArtGalleryManagementView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 506);
-            this.Controls.Add(this.showStatisticButton);
-            this.Controls.Add(this.tabControl1);
+            this.ClientSize = new System.Drawing.Size(746, 558);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.graphicsTab);
             this.Controls.Add(this.saveButton);
             this.Name = "ArtGalleryManagementView";
             this.Text = "Art Gallery";
@@ -557,10 +646,15 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.paintingDataGridView)).EndInit();
-            this.tabControl1.ResumeLayout(false);
+            this.graphicsTab.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownInstitutionIdChart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.institutionChart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.artsChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paintingBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sculptureBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.institutionBindingSource)).EndInit();
@@ -575,11 +669,6 @@
         private System.Windows.Forms.BindingSource institutionBindingSource;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.DataGridView institutionDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn locationDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn paintingsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sculpturesDataGridViewTextBoxColumn;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView sculptureDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn1;
@@ -595,7 +684,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn artistNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn yearDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl graphicsTab;
         private System.Windows.Forms.NumericUpDown numericUpDownSculptureId;
         private System.Windows.Forms.NumericUpDown numericUpDownPaintingId;
         private System.Windows.Forms.NumericUpDown numericUpDownInstututionId;
@@ -618,6 +707,16 @@
         private System.Windows.Forms.TextBox passwordTextField;
         private System.Windows.Forms.TextBox emailTextField;
         private System.Windows.Forms.Button showStatisticButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn locationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Button buttonGenerateInstitutionChart;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.NumericUpDown numericUpDownInstitutionIdChart;
+        private System.Windows.Forms.DataVisualization.Charting.Chart institutionChart;
+        private System.Windows.Forms.DataVisualization.Charting.Chart artsChart;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

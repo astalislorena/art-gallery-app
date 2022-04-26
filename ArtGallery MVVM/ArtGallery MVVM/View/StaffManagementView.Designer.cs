@@ -1,4 +1,4 @@
-﻿namespace ArtGallery_MVVM.View
+﻿namespace ArtGallery_MVC.View
 {
     partial class StaffManagementView
     {
@@ -50,9 +50,9 @@
             this.emailDataGridViewTextBoxColumn,
             this.passwordDataGridViewTextBoxColumn});
             this.staffDataGridView.DataSource = this.userBindingSource;
-            this.staffDataGridView.Location = new System.Drawing.Point(166, 12);
+            this.staffDataGridView.Location = new System.Drawing.Point(12, 12);
             this.staffDataGridView.Name = "staffDataGridView";
-            this.staffDataGridView.Size = new System.Drawing.Size(443, 450);
+            this.staffDataGridView.Size = new System.Drawing.Size(444, 450);
             this.staffDataGridView.TabIndex = 0;
             // 
             // firstNameDataGridViewTextBoxColumn
@@ -81,11 +81,11 @@
             // 
             // userBindingSource
             // 
-            this.userBindingSource.DataSource = typeof(ArtGallery_MVP.Models.User);
+            this.userBindingSource.DataSource = typeof(ArtGallery_MVC.Model.User);
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(534, 468);
+            this.saveButton.Location = new System.Drawing.Point(381, 468);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(75, 23);
             this.saveButton.TabIndex = 1;
@@ -96,7 +96,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(621, 503);
+            this.ClientSize = new System.Drawing.Size(465, 503);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.staffDataGridView);
             this.Name = "StaffManagementView";

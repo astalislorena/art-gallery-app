@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ArtGallery_MVP.Models
+namespace ArtGallery_MVC.Model
 {
     [Table("user")]
     public class User

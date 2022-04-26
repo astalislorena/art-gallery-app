@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
-namespace ArtGallery_MVVM.Migrations
+namespace ArtGallery_MVC.Migrations
 {
     public partial class institution2 : Migration
     {
